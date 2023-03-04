@@ -1,1 +1,1 @@
-30, 30, 10, 55, 40, 10, 12
+This is an App based on a weekly-challenge called "boracodar", from the brazilian company RocketSeat. Is a dashboard that shows the users traffic in a plataform.
