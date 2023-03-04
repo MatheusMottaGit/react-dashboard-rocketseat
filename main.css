@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu+Mono&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialised;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: poppins
+}
+
+:root{
+  font-size: 62.5%; 
+}
+
+body{
+  font-size: 1.6rem;
+}
+
+.hovercard-content{
+    background-color: antiquewhite;
+    height: 10vh;
+    width: 12vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.hovercard-content p{
+    font-size: 1.8rem;
+}
+
+.icon{
+    height: 20px;
+    width: 20px;
+    margin: .8rem;
+}
+
+.box{
+    padding: 2.9rem 4.8rem;
+    background: #363447;
+    box-shadow: 0.3rem 0.4rem 2.6rem rgba(0, 0, 0, 0.25);
+
+    border-radius: 1.6rem;
+    color: #FFFFFF;
+
+    line-height: 160%;
+}
+
+.grid{
+    display: grid;
+}
+
+#app{
+    background: #292738;
+    
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 5rem;
+    column-gap: 3.2rem;
+
+    width: 100vw;
+    height: 100vh;
+
+    padding: 4.6rem 15rem;
+    
+}
+
+.box:nth-child(4){
+    grid-column: 1/4;
+}
+
+.top{
+    font-weight: 600;
+    font-size: 1.4rem;
+    justify-content: center;
+}
+
+.bottom{
+    display: flex;
+    gap: 2rem;
+    margin-top: auto;
+}
+
+.bottom .item{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.bottom .item span:nth-child(1){
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+
+.bottom .item span:nth-child(1)::before{
+    content: '';
+    width: 1.5rem;
+    height: 1.5rem;
+    display: block;
+
+    background: #4A4556;
+    border-radius: 999px;
+}
+
+.target .bottom .item span:nth-child(1)::before
+
+.nps{
+    font-weight: 600;
+    font-size: 1.4rem;
+
+    width: 28rem;
+
+    gap: 2.4rem;
+    text-align: center;
+}
+
+.nps .middle{
+    height: 19.7rem;
+    place-content: center;
+    justify-items: center;
+    gap: 1.6rem;
+    color: #81FBB8;
+}
+
+.nps .bottom{
+    font-weight: 500;
+    font-size: 1.4rem;
+    justify-content: center;
+    gap: 1rem;
+}
+
+svg{
+    width: 19.7rem;
+    height: 19.7rem;
+    transform: rotate(-90deg);
+}
+
+svg circle{
+    stroke-width: 27;
+    fill: none;
+    stroke-dasharray: 618;
+    stroke-dashoffset: 618;
+}
+
+svg circle:nth-child(1){
+    stroke-dashoffset: 0;
+}
+
+svg circle:nth-child(2){
+    stroke-dashoffset: calc(618 - ((618 * 61)/100));
+    stroke-linecap: round;
+    
+    animation: progress 1s ease;
+}
+
+@keyframes progress{
+    0% {
+        stroke-dasharray: 618;
+        stroke-dashoffset: 618;
+    }
+}
+
+h3{
+    font-size: 2rem;
+}
+
+p{
+    font-size: 1.2rem;
+}
+
+.middle .content{
+    position: absolute;
+    top: 39%;
+    left: 50%;
+
+    transform: translate(-50%);
+}
+
+.middle{
+    display: grid;
+    place-content: center;
+    position: relative;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.ocurrency{
+    gap: 3.2rem;
+}
+
+.ocurrency .wrapper{
+    display: flex;
+    gap: 3.2rem;
+}
+
+.ocurrency .left{
+    gap: 3.2rem;
+}
+
+.ocurrency .left,
+.ocurrency .right{
+    flex: 1;
+}
+
+.left .grid{
+    gap: .8rem;
+    font-weight: 500;
+    font-size: 2.4rem;
+}
+
+.left .grid span{
+    font-size: 1.4rem;
+}
+
+.left .grid span::before{
+    content: '';
+    width: 1.5rem;
+    height: 1.5rem;
+    display: block;
+    clip-path: polygon(50%, 0%, 0%, 100%, 100% 100%);
+}
+
+.left .day-more span::before{
+    background: linear-gradient(180deg, #81FBBB 0%, #28C76F 100%);
+}
+
+.left .day-less span::before{
+    background: linear-gradient(180deg, #EA5455 0%, #FEB692 100%);
+    transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+.bars{
+    display: flex;
+    gap: 5.9rem;
+    align-items: flex-end;
+}
+
+.ref-line{
+    background-color: antiquewhite;
+    height: 1px;
+    opacity: 50%;
+    border-radius: 999px;
+
+    margin-bottom: 5px;
+}
+
+.bar-wrapper{
+    display: grid;
+    justify-items: center;
+    gap: .5rem;
+}
+
+.bar{
+
+    background: linear-gradient(180deg, #90F7EC 0%, #32CCBC 100%);
+    width: 1.5rem;
+    border-radius: 999px;
+
+    animation: progress-animation 0.5s linear;
+}
+
+/*conditional classes*/
+
+.less-5{
+    height: 13rem;
+}
+
+.less-10{
+    height: 15rem;
+}
+
+.less-12{
+    height: 17rem;
+}
+
+.less-25{
+    height: 19rem;
+}
+
+.less-50{
+    height: 21rem;
+}
+
